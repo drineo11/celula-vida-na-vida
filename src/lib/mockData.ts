@@ -69,76 +69,76 @@ export interface Notice {
   pinned: boolean;
 }
 
-// Mock Participants
+// Participantes e aniversários
 export const mockParticipants: Participant[] = [
-  { id: "1", name: "Cláudia", birthDate: "1985-01-15" },
-  { id: "2", name: "Adriana", birthDate: "1990-03-22" },
-  { id: "3", name: "Guilherme", birthDate: "1988-07-10" },
-  { id: "4", name: "Ana", birthDate: "1992-01-14" },
-  { id: "5", name: "Marcelo", birthDate: "1982-11-05" },
-  { id: "6", name: "Andreia", birthDate: "1986-09-18" },
-  { id: "7", name: "Adriano", birthDate: "1984-04-30" },
-  { id: "8", name: "Paulo", birthDate: "1980-12-25" },
-  { id: "9", name: "Silvana", birthDate: "1983-06-08" },
+  // Fevereiro
+  { id: "1", name: "Tamires", birthDate: "1990-02-09" },
+  { id: "2", name: "Beatriz", birthDate: "1990-02-25" },
+  // Março
+  { id: "3", name: "Adriano", birthDate: "1984-03-22" },
+  // Abril
+  { id: "4", name: "Isaac", birthDate: "2010-04-12" },
+  // Maio
+  { id: "5", name: "Marcelo Junior", birthDate: "2010-05-09" },
+  { id: "6", name: "Márcia", birthDate: "1985-05-24" },
+  // Junho
+  { id: "7", name: "Cláudia", birthDate: "1985-06-08" },
+  { id: "8", name: "Ana Carla", birthDate: "1992-06-14" },
+  { id: "9", name: "Laura", birthDate: "2015-06-28" },
+  // Agosto
+  { id: "10", name: "Lara", birthDate: "2012-08-01" },
+  { id: "11", name: "Ygor", birthDate: "1990-08-03" },
+  { id: "12", name: "Silvana", birthDate: "1983-08-10" },
+  { id: "13", name: "Zenildo", birthDate: "1980-08-11" },
+  { id: "14", name: "Paulo", birthDate: "1980-08-12" },
+  { id: "15", name: "Benjamim", birthDate: "2018-08-18" },
+  // Setembro
+  { id: "16", name: "Rômulo", birthDate: "1988-09-13" },
+  { id: "17", name: "Yasmim", birthDate: "1990-09-13" },
+  { id: "18", name: "Adriana", birthDate: "1990-09-28" },
+  // Outubro
+  { id: "19", name: "Marcelo", birthDate: "1982-10-07" },
+  // Novembro
+  { id: "20", name: "Josy", birthDate: "1986-11-16" },
+  { id: "21", name: "Guilherme", birthDate: "1988-11-23" },
+  // Dezembro
+  { id: "22", name: "Rodrigo", birthDate: "1985-12-17" },
+  { id: "23", name: "Andreia", birthDate: "1986-12-29" },
 ];
 
 // Mock Current Cell Meeting
 export const mockCurrentMeeting: CellMeeting = {
   id: "1",
-  date: "2025-01-17",
+  date: "2026-03-13",
   time: "20:00",
-  houseName: "Casa da Cláudia",
-  address: "Rua Barbados, 54 - Vista Verde, São José dos Campos - SP",
-  mapsLink: "https://maps.google.com/?q=Rua+Barbados,+54+-+Vista+Verde,+São+José+dos+Campos+-+SP",
+  houseName: "Casa do Adriano & Adriana",
+  address: "Rua Rio Paru, 175 - Jardim Pararangaba, São José dos Campos - SP",
+  mapsLink: "https://www.google.com/maps/place/Rua+Rio+Paru,+175+-+Jardim+Pararangaba,+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP,+12224-800/@-23.1704358,-45.8121876,17z/data=!3m1!4b1!4m6!3m5!1s0x94cc4c69f78cd313:0x81c4a247a17c3415!8m2!3d-23.1704408!4d-45.8096127!16s%2Fg%2F11vjpzjsmp?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D",
 };
 
 // Mock Monthly Schedule
 export const mockMonthlySchedule: MonthlySchedule = {
   id: "1",
-  month: 1,
-  year: 2025,
+  month: 3,
+  year: 2026,
   weeks: [
     {
       id: "w1",
       weekNumber: 1,
       label: "Semana 01 - Sexta",
-      date: "2025-01-03",
+      date: "2026-03-06",
       assignments: {
         casa: ["Cláudia"],
         quebraGelo: ["Cláudia"],
         estudo: ["Adriana"],
-        salinha: ["Guilherme", "Ana"],
+        salinha: ["Paulo", "Silvana"],
       },
     },
     {
       id: "w2",
       weekNumber: 2,
       label: "Semana 02 - Sexta",
-      date: "2025-01-10",
-      assignments: {
-        casa: ["Marcelo", "Andreia"],
-        quebraGelo: ["Marcelo", "Andreia"],
-        estudo: ["Adriano"],
-        salinha: ["Paulo", "Silvana"],
-      },
-    },
-    {
-      id: "w3",
-      weekNumber: 3,
-      label: "Semana 03 - Sexta",
-      date: "2025-01-17",
-      assignments: {
-        casa: ["Guilherme", "Ana"],
-        quebraGelo: ["Guilherme", "Ana"],
-        estudo: ["Marcelo"],
-        salinha: ["Adriano", "Adriana"],
-      },
-    },
-    {
-      id: "w4",
-      weekNumber: 4,
-      label: "Semana 04 - Sexta",
-      date: "2025-01-24",
+      date: "2026-03-13",
       assignments: {
         casa: ["Adriano", "Adriana"],
         quebraGelo: ["Adriano", "Adriana"],
@@ -146,40 +146,57 @@ export const mockMonthlySchedule: MonthlySchedule = {
         salinha: ["Marcelo", "Andreia"],
       },
     },
-  ],
-  prayerNight: {
-    date: "2025-01-31",
-    assignments: {
-      casa: ["Paulo", "Silvana"],
-      lideresIgreja: ["Paulo", "Silvana"],
-      liderancaPais: ["Adriano", "Adriana"],
-      igrejaPerseguida: ["Marcelo", "Andreia"],
-      salinha: ["Guilherme", "Ana"],
+    {
+      id: "w3",
+      weekNumber: 3,
+      label: "Semana 03 - Sexta",
+      date: "2026-03-20",
+      assignments: {
+        casa: ["Ana", "Guilherme"],
+        quebraGelo: ["Ana", "Guilherme"],
+        estudo: ["Silvana"],
+        salinha: ["Adriano", "Adriana"],
+      },
     },
-  },
+    {
+      id: "w4",
+      weekNumber: 4,
+      label: "Semana 04 - Sábado",
+      date: "2026-03-28",
+      isPrayerNight: true,
+      prayerNightType: "church",
+      prayerTime: "20:00",
+      assignments: {
+        casa: ["—"],
+        quebraGelo: ["—"],
+        estudo: ["—"],
+        salinha: ["—"],
+      },
+    },
+  ],
 };
 
-// Mock Notices
+// Recados & Programação
 export const mockNotices: Notice[] = [
   {
     id: "1",
-    title: "Culto de Celebração",
-    description: "Domingo às 18h no templo principal. Venha adorar conosco!",
-    date: "2025-01-19",
-    pinned: true,
+    title: "Escola de Oração",
+    description: "Dia 14/03 às 14:00",
+    date: "2026-03-14",
+    pinned: false,
   },
   {
     id: "2",
-    title: "Retiro de Casais",
-    description: "Inscrições abertas para o retiro de fevereiro. Vagas limitadas!",
-    date: "2025-02-14",
+    title: "Guia do Discipulador",
+    description: "Dia 21/03",
+    date: "2026-03-21",
     pinned: false,
   },
   {
     id: "3",
-    title: "Dia de Jejum",
-    description: "Quarta-feira será dia de jejum coletivo pela célula.",
-    date: "2025-01-22",
+    title: "Day Camp",
+    description: "Dia 21/04",
+    date: "2026-04-21",
     pinned: false,
   },
 ];
