@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Célula Vida na Vida - Design System */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core Wine/Burgundy Theme */
+    --wine-50: 350 30% 97%;
+    --wine-100: 350 40% 92%;
+    --wine-200: 350 45% 82%;
+    --wine-300: 350 50% 70%;
+    --wine-400: 350 60% 55%;
+    --wine-500: 350 70% 42%;
+    --wine-600: 350 75% 35%;
+    --wine-700: 350 78% 28%;
+    --wine-800: 350 80% 22%;
+    --wine-900: 350 82% 15%;
+
+    /* Coral Accent */
+    --coral-400: 10 70% 65%;
+    --coral-500: 10 75% 58%;
+
+    /* Cream */
+    --cream-50: 40 40% 98%;
+    --cream-100: 40 35% 95%;
+    --cream-200: 40 30% 90%;
+
+    /* Semantic Colors */
+    --background: 40 40% 98%;
+    --foreground: 350 80% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 350 80% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 350 80% 15%;
+
+    --primary: 350 75% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 30% 92%;
+    --secondary-foreground: 350 75% 28%;
+
+    --muted: 350 20% 94%;
+    --muted-foreground: 350 30% 45%;
+
+    --accent: 10 70% 65%;
+    --accent-foreground: 350 80% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 25% 88%;
+    --input: 350 25% 88%;
+    --ring: 350 75% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-wine: linear-gradient(135deg, hsl(350, 78%, 28%) 0%, hsl(350, 75%, 35%) 50%, hsl(350, 70%, 42%) 100%);
+    --gradient-wine-dark: linear-gradient(180deg, hsl(350, 80%, 22%) 0%, hsl(350, 78%, 28%) 100%);
+    --gradient-coral: linear-gradient(90deg, hsl(10, 75%, 58%) 0%, hsl(10, 70%, 65%) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(139, 30, 63, 0.9) 0%, rgba(139, 30, 63, 0.75) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(139, 30, 63, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(139, 30, 63, 0.1), 0 2px 4px -2px rgba(139, 30, 63, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(139, 30, 63, 0.1), 0 4px 6px -4px rgba(139, 30, 63, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(139, 30, 63, 0.1), 0 8px 10px -6px rgba(139, 30, 63, 0.1);
+    --shadow-card: 0 4px 20px -2px rgba(139, 30, 63, 0.15);
+
+    /* Sidebar */
+    --sidebar-background: 350 78% 28%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 350 78% 28%;
+    --sidebar-accent: 350 70% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 350 60% 40%;
+    --sidebar-ring: 10 70% 65%;
+  }
+
+  .dark {
+    --background: 350 80% 8%;
+    --foreground: 40 40% 98%;
+
+    --card: 350 75% 12%;
+    --card-foreground: 40 40% 98%;
+
+    --popover: 350 75% 12%;
+    --popover-foreground: 40 40% 98%;
+
+    --primary: 10 70% 65%;
+    --primary-foreground: 350 80% 15%;
+
+    --secondary: 350 50% 20%;
+    --secondary-foreground: 40 40% 98%;
+
+    --muted: 350 40% 18%;
+    --muted-foreground: 350 20% 65%;
+
+    --accent: 10 70% 65%;
+    --accent-foreground: 350 80% 15%;
+
+    --border: 350 40% 25%;
+    --input: 350 40% 25%;
+    --ring: 10 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Banner Hero Styles */
+  .banner-hero {
+    @apply relative overflow-hidden rounded-2xl;
+    background: var(--gradient-wine);
+  }
+
+  .banner-hero::before {
+    content: '';
+    @apply absolute inset-0;
+    background: var(--gradient-overlay);
+  }
+
+  .banner-hero-content {
+    @apply relative z-10;
+  }
+
+  /* Wine Card */
+  .wine-card {
+    @apply bg-card rounded-xl p-4 sm:p-6;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Category Badge */
+  .category-badge {
+    @apply inline-flex items-center justify-center px-3 py-1 text-xs font-semibold uppercase tracking-wide rounded-md;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Coral Button */
+  .coral-btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full transition-all duration-300;
+    background: var(--gradient-coral);
+    color: hsl(var(--foreground));
+  }
+
+  .coral-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Week Label */
+  .week-label {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Schedule Grid */
+  .schedule-grid {
+    @apply grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3;
+  }
+
+  .schedule-item {
+    @apply flex flex-col items-center text-center p-3 rounded-lg bg-white;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .schedule-item-header {
+    @apply w-full py-1.5 px-2 rounded-t-md text-[10px] sm:text-xs font-bold uppercase tracking-wider;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .schedule-item-body {
+    @apply py-2 px-1 text-xs sm:text-sm font-medium text-center;
+    color: hsl(var(--foreground));
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .text-gradient-wine {
+    background: var(--gradient-wine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-wine {
+    background: var(--gradient-wine);
+  }
+
+  .bg-gradient-wine-dark {
+    background: var(--gradient-wine-dark);
+  }
+
+  .bg-gradient-coral {
+    background: var(--gradient-coral);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-wine {
+    box-shadow: var(--shadow-lg);
+  }
+}
