@@ -190,13 +190,13 @@
   }
 
   .schedule-item-header {
-    @apply w-full py-1.5 px-2 rounded-t-md text-[10px] sm:text-xs font-bold uppercase tracking-wider;
+    @apply w-full py-1.5 px-2 rounded-t-md text-xs sm:text-sm font-bold uppercase tracking-wider;
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
   }
 
   .schedule-item-body {
-    @apply py-2 px-1 text-xs sm:text-sm font-medium text-center;
+    @apply py-2 px-1 text-sm sm:text-base font-medium text-center;
     color: hsl(var(--foreground));
   }
 

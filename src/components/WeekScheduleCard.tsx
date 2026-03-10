@@ -72,7 +72,7 @@ export function WeekScheduleCard({
           <p>Reunião na igreja às <strong>{timeDisplay}</strong></p>
         </div>
         {showFullLink && <Link to="/escala" className="flex items-center justify-center gap-1 mt-5 text-primary font-medium text-sm hover:underline">
-            Ver escala do mês
+            CLIQUE AQUI PARA VER A ESCALA DO MÊS
             <ChevronRight size={16} />
           </Link>}
       </section>;
@@ -106,7 +106,7 @@ export function WeekScheduleCard({
         })}
         </div>
         {showFullLink && <Link to="/escala" className="flex items-center justify-center gap-1 mt-5 text-primary font-medium text-sm hover:underline">
-            Ver escala do mês
+            CLIQUE AQUI PARA VER A ESCALA DO MÊS
             <ChevronRight size={16} />
           </Link>}
       </section>;
@@ -140,7 +140,7 @@ export function WeekScheduleCard({
       </div>
 
       {showFullLink && <Link to="/escala" className="flex items-center justify-center gap-1 mt-5 text-primary font-medium text-sm hover:underline">
-          Ver escala do mês
+          CLIQUE AQUI PARA VER A ESCALA DO MÊS
           <ChevronRight size={16} />
         </Link>}
     </section>;
