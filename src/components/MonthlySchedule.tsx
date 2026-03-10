@@ -1,6 +1,7 @@
 import { Home, Snowflake, BookOpen, Baby, Church, Users, Globe } from "lucide-react";
 import { MonthlySchedule as MonthlyScheduleType, getMonthNamePT } from "@/lib/mockData";
 import { Logo } from "./Logo";
+import aliancaLogo from "@/assets/alianca-logo-white.png";
 import { parseDateSafe } from "@/lib/utils";
 
 interface MonthlyScheduleProps {
@@ -163,10 +164,11 @@ export function MonthlyScheduleView({ schedule }: MonthlyScheduleProps) {
         {/* Footer Logo */}
         <div className="flex items-center justify-between pt-6 pb-4">
           <Logo variant="light" size="md" />
-          <div className="text-primary-foreground text-right">
-            <p className="font-display font-bold text-lg">Aliança</p>
-            <p className="text-sm opacity-80">Vista Verde</p>
-          </div>
+          <img 
+            src={aliancaLogo} 
+            alt="Igreja Aliança Cristã & Missionária - Vista Verde" 
+            className="h-12 w-auto"
+          />
         </div>
       </main>
     </div>
