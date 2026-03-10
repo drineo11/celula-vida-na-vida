@@ -1,73 +1,57 @@
-# Welcome to your Lovable project
+# Célula Vida na Vida
 
-## Project info
+Aplicação web da Célula Vida na Vida — Igreja Aliança, Vista Verde (São José dos Campos - SP).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Funcionalidades
 
-## How can I edit this code?
+- **Banner semanal** — Informações do próximo encontro (data, horário, local e link do Google Maps)
+- **Escala da semana** — Quem é responsável por cada função (casa, quebra-gelo, estudo, salinha)
+- **Escala mensal** — Visão completa da escala do mês na rota `/escala`
+- **Noite de oração** — Suporte a noites de oração na igreja ou na célula
+- **Aniversariantes** — Destaque para aniversariantes da semana e do mês
+- **Recados e programação** — Avisos fixados e eventos futuros
 
-There are several ways of editing your application.
+## Tecnologias
 
-**Use Lovable**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Como rodar
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clonar o repositório
+git clone https://github.com/drineo11/celula-vida-na-vida.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Entrar na pasta
+cd celula-vida-na-vida
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Instalar dependências
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Rodar em modo desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto roda em `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Como atualizar os dados
 
-**Use GitHub Codespaces**
+Todas as informações são editadas diretamente no arquivo `src/lib/mockData.ts`:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| Dado | Variável |
+|------|----------|
+| Reunião da semana | `mockCurrentMeeting` |
+| Escala mensal | `mockMonthlySchedule` |
+| Participantes e aniversários | `mockParticipants` |
+| Avisos | `mockNotices` |
 
-## What technologies are used for this project?
+## Build de produção
 
-This project is built with:
+```sh
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Os arquivos são gerados na pasta `dist/`.
