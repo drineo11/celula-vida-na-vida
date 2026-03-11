@@ -1,7 +1,7 @@
 import { MapPin, ExternalLink } from "lucide-react";
 import { CellMeeting, formatDatePT } from "@/lib/mockData";
 import { Logo } from "./Logo";
-import bannerBg from "@/assets/banner-bg.jpg";
+import bannerBg from "@/assets/banner-bg.jpeg";
 import { parseDateSafe } from "@/lib/utils";
 
 interface WeeklyBannerProps {
@@ -21,8 +21,10 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
       className="relative overflow-hidden rounded-2xl"
       style={{
         backgroundImage: `url(${meeting.backgroundImage || bannerBg})`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "hsl(350, 78%, 28%)",
       }}
     >
       {/* Wine overlay with fade effect */}
@@ -47,7 +49,7 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
 
         {/* Date and Time Row */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-          <div className="bg-coral-500 text-foreground px-4 py-2 rounded-lg">
+          <div className="bg-coral-500 text-primary-foreground px-4 py-2 rounded-lg">
             <span className="font-display font-bold text-xl sm:text-2xl">
               {dayNumber} {month}
             </span>
