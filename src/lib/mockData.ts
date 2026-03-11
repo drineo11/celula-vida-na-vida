@@ -181,7 +181,7 @@ export const mockNotices: Notice[] = [
   {
     id: "1",
     title: "Escola de Oração",
-    description: "Dia 14/03 às 14:00",
+    description: "Dia 14/03 às 14:00 na igreja Aliança Vista Verde",
     date: "2026-03-14",
     pinned: false,
   },
