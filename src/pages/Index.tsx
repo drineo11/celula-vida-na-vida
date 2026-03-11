@@ -6,17 +6,18 @@ import { NoticesSection } from "@/components/NoticesSection";
 import { BirthdaySection } from "@/components/BirthdaySection";
 import { MonthlyBirthdaySection } from "@/components/MonthlyBirthdaySection";
 import {
-  mockCurrentMeeting,
   mockParticipants,
   mockMonthlySchedule,
   mockNotices,
   getCurrentWeekSchedule,
+  getCurrentMeeting,
   getWeekBirthdays,
 } from "@/lib/mockData";
 import { parseDateSafe } from "@/lib/utils";
 
 const Index = () => {
   const currentWeekSchedule = getCurrentWeekSchedule(mockMonthlySchedule);
+  const currentMeeting = getCurrentMeeting(mockMonthlySchedule);
   const weekBirthdays = getWeekBirthdays(mockParticipants);
 
   // Filter monthly birthdays from participants
@@ -44,7 +45,7 @@ const Index = () => {
 
       <main className="flex-1 container py-6 space-y-6">
         {/* Weekly Meeting Banner */}
-        <WeeklyBanner meeting={mockCurrentMeeting} />
+        <WeeklyBanner meeting={currentMeeting} />
 
         {/* Week Schedule */}
         <WeekScheduleCard schedule={currentWeekSchedule} />

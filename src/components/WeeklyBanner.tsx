@@ -13,6 +13,7 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
   
   const formattedDate = formatDatePT(meeting.date);
   const dayOfWeek = dateObj.toLocaleDateString("pt-BR", { weekday: "long" });
+  const dayOfWeekCapitalized = dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1);
   const dayNumber = dateObj.getDate();
   const month = dateObj.toLocaleDateString("pt-BR", { month: "long" }).toUpperCase();
 
@@ -39,7 +40,7 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
       <div className="relative z-10 p-6 sm:p-8 lg:p-10 flex flex-col items-center text-center text-primary-foreground">
         {/* Top subtle text */}
         <p className="font-display italic text-lg sm:text-xl opacity-90 mb-2">
-          Sexta-feira tem
+          {dayOfWeekCapitalized} tem
         </p>
 
         {/* Main Title */}

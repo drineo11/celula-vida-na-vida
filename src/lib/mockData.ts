@@ -29,6 +29,9 @@ export interface WeekSchedule {
   isPrayerNight?: boolean;
   prayerNightType?: "church" | "cell" | null;
   prayerTime?: string;
+  houseName?: string;
+  address?: string;
+  mapsLink?: string;
   assignments: WeekScheduleAssignments;
 }
 
@@ -69,6 +72,76 @@ export interface Notice {
   pinned: boolean;
 }
 
+// Mapeamento de endereços das casas
+export interface HouseLocation {
+  houseName: string;
+  address: string;
+  mapsLink: string;
+}
+
+export const houseLocations: Record<string, HouseLocation> = {
+  "Ana Carla": {
+    houseName: "Casa da Ana Carla & Guilherme",
+    address: "Av. Alberto Renart, 795 - Santa Inês 1, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/54Chr1MN7wjvKPg16",
+  },
+  "Ana": {
+    houseName: "Casa da Ana Carla & Guilherme",
+    address: "Av. Alberto Renart, 795 - Santa Inês 1, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/54Chr1MN7wjvKPg16",
+  },
+  "Guilherme": {
+    houseName: "Casa da Ana Carla & Guilherme",
+    address: "Av. Alberto Renart, 795 - Santa Inês 1, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/54Chr1MN7wjvKPg16",
+  },
+  "Adriano": {
+    houseName: "Casa do Adriano & Adriana",
+    address: "Rua Rio Paru, 175 - Jd Pararangaba, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/ehihCn8FvJRSHkMb9",
+  },
+  "Adriana": {
+    houseName: "Casa do Adriano & Adriana",
+    address: "Rua Rio Paru, 175 - Jd Pararangaba, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/ehihCn8FvJRSHkMb9",
+  },
+  "Paulo": {
+    houseName: "Casa do Paulo & Silvana",
+    address: "Rua dos Heliotrópios, 255 - Jd. Motorama, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/c8SH5ua3syX5dQ6g9",
+  },
+  "Silvana": {
+    houseName: "Casa do Paulo & Silvana",
+    address: "Rua dos Heliotrópios, 255 - Jd. Motorama, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/c8SH5ua3syX5dQ6g9",
+  },
+  "Marcelo": {
+    houseName: "Casa do Marcelo & Andreia",
+    address: "Rua Cidade Montevideo, 134 - Vista Verde, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/QEySpXEnsrSCxZHP6",
+  },
+  "Andreia": {
+    houseName: "Casa do Marcelo & Andreia",
+    address: "Rua Cidade Montevideo, 134 - Vista Verde, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/QEySpXEnsrSCxZHP6",
+  },
+  "Cláudia": {
+    houseName: "Casa da Cláudia",
+    address: "Rua Barbados, 54 - Vista Verde, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/Tp5Bexymzg9wt9wW9",
+  },
+  "Zenildo": {
+    houseName: "Casa do Zenildo & Márcia",
+    address: "R. Buenos Aíres, 83 - Vista Verde, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/45XFmvBLFmhDnnFD8",
+  },
+  "Márcia": {
+    houseName: "Casa do Zenildo & Márcia",
+    address: "R. Buenos Aíres, 83 - Vista Verde, São José dos Campos - SP",
+    mapsLink: "https://maps.app.goo.gl/45XFmvBLFmhDnnFD8",
+  },
+};
+
 // Participantes e aniversários
 export const mockParticipants: Participant[] = [
   // Fevereiro
@@ -106,14 +179,14 @@ export const mockParticipants: Participant[] = [
   { id: "23", name: "Andreia", birthDate: "1986-12-29" },
 ];
 
-// Mock Current Cell Meeting
-export const mockCurrentMeeting: CellMeeting = {
-  id: "1",
+// Fallback meeting (used when no schedule week is found)
+const fallbackMeeting: CellMeeting = {
+  id: "fallback",
   date: "2026-03-13",
   time: "20:00",
   houseName: "Casa do Adriano & Adriana",
-  address: "Rua Rio Paru, 175 - Jardim Pararangaba, São José dos Campos - SP",
-  mapsLink: "https://www.google.com/maps/place/Rua+Rio+Paru,+175+-+Jardim+Pararangaba,+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP,+12224-800/@-23.1704358,-45.8121876,17z/data=!3m1!4b1!4m6!3m5!1s0x94cc4c69f78cd313:0x81c4a247a17c3415!8m2!3d-23.1704408!4d-45.8096127!16s%2Fg%2F11vjpzjsmp?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D",
+  address: "Rua Rio Paru, 175 - Jd Pararangaba, São José dos Campos - SP",
+  mapsLink: "https://maps.app.goo.gl/ehihCn8FvJRSHkMb9",
 };
 
 // Mock Monthly Schedule
@@ -127,6 +200,9 @@ export const mockMonthlySchedule: MonthlySchedule = {
       weekNumber: 1,
       label: "Semana 01 - Sexta",
       date: "2026-03-06",
+      houseName: "Casa da Cláudia",
+      address: "Rua Barbados, 54 - Vista Verde, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/Tp5Bexymzg9wt9wW9",
       assignments: {
         casa: ["Cláudia"],
         quebraGelo: ["Cláudia"],
@@ -139,6 +215,9 @@ export const mockMonthlySchedule: MonthlySchedule = {
       weekNumber: 2,
       label: "Semana 02 - Sexta",
       date: "2026-03-13",
+      houseName: "Casa do Adriano & Adriana",
+      address: "Rua Rio Paru, 175 - Jd Pararangaba, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/ehihCn8FvJRSHkMb9",
       assignments: {
         casa: ["Adriano", "Adriana"],
         quebraGelo: ["Adriano", "Adriana"],
@@ -151,6 +230,9 @@ export const mockMonthlySchedule: MonthlySchedule = {
       weekNumber: 3,
       label: "Semana 03 - Sexta",
       date: "2026-03-20",
+      houseName: "Casa da Ana Carla & Guilherme",
+      address: "Av. Alberto Renart, 795 - Santa Inês 1, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/54Chr1MN7wjvKPg16",
       assignments: {
         casa: ["Ana", "Guilherme"],
         quebraGelo: ["Ana", "Guilherme"],
@@ -188,8 +270,8 @@ export const mockNotices: Notice[] = [
   {
     id: "2",
     title: "Guia do Discipulador",
-    description: "Dia 21/03",
-    date: "2026-03-21",
+    description: "Dia 11/04",
+    date: "2026-04-11",
     pinned: false,
   },
   {
@@ -208,30 +290,81 @@ function parseDateLocal(dateStr: string): Date {
   return new Date(year, month - 1, day);
 }
 
+/**
+ * Returns the current week's schedule based on today's date.
+ * Logic: show the week's data from Monday before the meeting through
+ * the day of the meeting (Friday/Saturday). After the meeting day,
+ * advance to the next week.
+ */
 export function getCurrentWeekSchedule(schedule: MonthlySchedule): WeekSchedule | null {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  for (const week of schedule.weeks) {
-    const weekDate = parseDateLocal(week.date);
+  // Find the week whose meeting date is today or the next upcoming one.
+  // After the meeting day, we advance to the next week.
+  for (let i = 0; i < schedule.weeks.length; i++) {
+    const weekDate = parseDateLocal(schedule.weeks[i].date);
     weekDate.setHours(0, 0, 0, 0);
-    
-    // Check if today is within 3 days before or after the meeting
-    const diffDays = Math.abs((today.getTime() - weekDate.getTime()) / (1000 * 60 * 60 * 24));
-    if (diffDays <= 3) {
-      return week;
+
+    // If today is on or before the meeting day, this is the current week
+    if (today <= weekDate) {
+      return schedule.weeks[i];
     }
   }
 
-  // Return the next upcoming week
-  for (const week of schedule.weeks) {
-    const weekDate = parseDateLocal(week.date);
-    if (weekDate >= today) {
-      return week;
-    }
+  // All weeks are in the past — return the last one
+  return schedule.weeks[schedule.weeks.length - 1] || null;
+}
+
+/**
+ * Derives a CellMeeting from the current week's schedule.
+ * Automatically uses the house location data from the week.
+ */
+export function getCurrentMeeting(schedule: MonthlySchedule): CellMeeting {
+  const week = getCurrentWeekSchedule(schedule);
+
+  if (!week) return fallbackMeeting;
+
+  // For prayer nights at church, show church info
+  if (week.isPrayerNight && week.prayerNightType === "church") {
+    return {
+      id: week.id,
+      date: week.date,
+      time: week.prayerTime || "20:00",
+      houseName: "Igreja Aliança Cristã e Missionária - Vista Verde",
+      address: "São José dos Campos - SP",
+      mapsLink: "",
+    };
   }
 
-  return schedule.weeks[0] || null;
+  // Use the week's location data if available
+  if (week.houseName && week.address) {
+    return {
+      id: week.id,
+      date: week.date,
+      time: "20:00",
+      houseName: week.houseName,
+      address: week.address,
+      mapsLink: week.mapsLink || "",
+    };
+  }
+
+  // Fallback: try to resolve from the "casa" assignment using houseLocations
+  const casaPerson = week.assignments.casa?.[0];
+  const location = casaPerson ? houseLocations[casaPerson] : null;
+
+  if (location) {
+    return {
+      id: week.id,
+      date: week.date,
+      time: "20:00",
+      houseName: location.houseName,
+      address: location.address,
+      mapsLink: location.mapsLink,
+    };
+  }
+
+  return { ...fallbackMeeting, id: week.id, date: week.date };
 }
 
 // Helper function to check birthdays
