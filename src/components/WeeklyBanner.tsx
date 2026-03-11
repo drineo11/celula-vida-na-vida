@@ -24,14 +24,14 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
         backgroundSize: "contain",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "hsl(350, 78%, 28%)",
+        backgroundColor: "hsl(350, 75%, 35%)",
       }}
     >
       {/* Wine overlay with fade effect */}
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, rgba(139, 30, 63, 0.92) 0%, rgba(139, 30, 63, 0.85) 50%, rgba(139, 30, 63, 0.78) 100%)',
+          background: 'linear-gradient(135deg, hsla(350, 78%, 28%, 0.92) 0%, hsla(350, 75%, 35%, 0.88) 50%, hsla(350, 70%, 42%, 0.82) 100%)',
         }}
       />
       
@@ -49,7 +49,7 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
 
         {/* Date and Time Row */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-          <div className="bg-coral-500 text-primary-foreground px-4 py-2 rounded-lg">
+          <div className="bg-primary-foreground text-primary px-4 py-2 rounded-lg">
             <span className="font-display font-bold text-xl sm:text-2xl">
               {dayNumber} {month}
             </span>

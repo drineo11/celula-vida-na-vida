@@ -163,8 +163,8 @@
   /* Coral Button */
   .coral-btn {
     @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full transition-all duration-300;
-    background: var(--gradient-coral);
-    color: #ffffff;
+    background: hsl(var(--primary-foreground));
+    color: hsl(var(--primary));
   }
 
   .coral-btn:hover {
