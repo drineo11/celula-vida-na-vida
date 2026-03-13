@@ -32,7 +32,7 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, hsla(350, 78%, 28%, 0.92) 0%, hsla(350, 75%, 35%, 0.88) 50%, hsla(350, 70%, 42%, 0.82) 100%)',
+          background: 'linear-gradient(135deg, hsla(350, 78%, 28%, 0.92) 0%, hsla(350, 75%, 35%, 0.58) 50%, hsla(350, 70%, 42%, 0.82) 100%)',
         }}
       />
       
