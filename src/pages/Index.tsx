@@ -11,14 +11,14 @@ import {
   mockNotices,
   getCurrentWeekSchedule,
   getCurrentMeeting,
-  getWeekBirthdays,
+  getTodayBirthdays,
 } from "@/lib/mockData";
 import { parseDateSafe } from "@/lib/utils";
 
 const Index = () => {
   const currentWeekSchedule = getCurrentWeekSchedule(mockMonthlySchedule);
   const currentMeeting = getCurrentMeeting(mockMonthlySchedule);
-  const weekBirthdays = getWeekBirthdays(mockParticipants);
+  const todayBirthdays = getTodayBirthdays(mockParticipants);
 
   // Filter monthly birthdays from participants
   const currentMonth = new Date().getMonth() + 1;
@@ -51,7 +51,7 @@ const Index = () => {
         <WeekScheduleCard schedule={currentWeekSchedule} />
 
         {/* Birthdays (conditional) */}
-        <BirthdaySection birthdays={weekBirthdays} />
+        <BirthdaySection birthdays={todayBirthdays} />
 
         {/* Notices */}
         <NoticesSection notices={mockNotices} />
