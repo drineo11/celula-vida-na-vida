@@ -262,20 +262,13 @@ export const mockMonthlySchedule: MonthlySchedule = {
 export const mockNotices: Notice[] = [
   {
     id: "1",
-    title: "Escola de Oração",
-    description: "Dia 14/03 às 14:00 na igreja Aliança Vista Verde",
-    date: "2026-03-14",
-    pinned: false,
-  },
-  {
-    id: "2",
     title: "Guia do Discipulador",
     description: "Dia 11/04",
     date: "2026-04-11",
     pinned: false,
   },
   {
-    id: "3",
+    id: "2",
     title: "Day Camp",
     description: "Dia 21/04",
     date: "2026-04-21",
