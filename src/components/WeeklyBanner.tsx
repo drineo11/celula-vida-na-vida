@@ -39,13 +39,13 @@ export function WeeklyBanner({ meeting }: WeeklyBannerProps) {
       {/* Content */}
       <div className="relative z-10 p-6 sm:p-8 lg:p-10 flex flex-col items-center text-center text-primary-foreground">
         {/* Top subtle text */}
-        <p className="font-display italic text-lg sm:text-xl opacity-90 mb-2">
+        <p className="font-display italic text-2xl sm:text-3xl opacity-95 mb-2">
           {dayOfWeekCapitalized} tem
         </p>
 
         {/* Main Title */}
         <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight mb-4">
-          CÉLULA
+          {meeting.title || "CÉLULA"}
         </h1>
 
         {/* Date and Time Row */}

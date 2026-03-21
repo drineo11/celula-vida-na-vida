@@ -78,8 +78,8 @@ export function MonthlyScheduleView({ schedule }: MonthlyScheduleProps) {
                     • NOITE DE ORAÇÃO NA IGREJA • {dayNumber}/{monthNumber}
                   </h2>
                 </div>
-                <div className="p-4 text-center text-muted-foreground">
-                  <p>Reunião na igreja às <strong>{timeDisplay}</strong></p>
+                <div className="p-7 text-center text-muted-foreground">
+                  <p className="text-lg sm:text-3xl">Reunião na igreja às <strong>{timeDisplay}</strong></p>
                 </div>
               </article>
             );

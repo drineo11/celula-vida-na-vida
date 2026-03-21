@@ -69,7 +69,7 @@ export function WeekScheduleCard({
           </span>
         </div>
         <div className="text-center py-4 text-muted-foreground">
-          <p>Reunião na igreja às <strong>{timeDisplay}</strong></p>
+          <p className="text-xl sm:text-3xl">Reunião na igreja às <strong>{timeDisplay}</strong></p>
         </div>
         {showFullLink && <Link to="/escala" className="flex items-center justify-center gap-1 mt-5 text-primary font-medium text-sm hover:underline">
             CLIQUE AQUI PARA VER A ESCALA DO MÊS

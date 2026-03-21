@@ -56,6 +56,7 @@ export interface MonthlySchedule {
 
 export interface CellMeeting {
   id: string;
+  title?: string;
   date: string;
   time: string;
   houseName: string;
@@ -322,11 +323,12 @@ export function getCurrentMeeting(schedule: MonthlySchedule): CellMeeting {
   if (week.isPrayerNight && week.prayerNightType === "church") {
     return {
       id: week.id,
+      title:"NOITE DE ORAÇÃO",
       date: week.date,
       time: week.prayerTime || "20:00",
       houseName: "Igreja Aliança Cristã e Missionária - Vista Verde",
-      address: "São José dos Campos - SP",
-      mapsLink: "",
+      address: "Rua Buenos Aires, 414 - Bairro Vista Verde, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/divXFvEau5qx6y2GA",
     };
   }
 
