@@ -16,7 +16,7 @@ const oikosData: OikosFamily[] = [
   { leader: "Zenildo", members: ["Irmãos"] },
   { leader: "Ana Carla", members: ["Josie"] },
   { leader: "Marcelo", members: ["João Pedro"] },
-  { leader: "Adriano", members: ["Helyasafe"] },
+  { leader: "Adriano", members: ["Helyasafe", "Andriele"] },
 ];
 
 const Oikos = () => {
