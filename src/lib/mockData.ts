@@ -35,15 +35,17 @@ export interface WeekSchedule {
   assignments: WeekScheduleAssignments;
 }
 
+export interface PrayerNightAssignments {
+  casa: string[];
+  salinha: string[];
+  lideresIgreja?: string[];
+  liderancaPais?: string[];
+  igrejaPerseguida?: string[];
+}
+
 export interface PrayerNight {
   date: string;
-  assignments: {
-    casa: string[];
-    lideresIgreja: string[];
-    liderancaPais: string[];
-    igrejaPerseguida: string[];
-    salinha: string[];
-  };
+  assignments: PrayerNightAssignments;
 }
 
 export interface MonthlySchedule {
@@ -183,7 +185,7 @@ export const mockParticipants: Participant[] = [
 // Fallback meeting (used when no schedule week is found)
 const fallbackMeeting: CellMeeting = {
   id: "fallback",
-  date: "2026-03-13",
+  date: "2026-04-03",
   time: "20:00",
   houseName: "Casa do Adriano & Adriana",
   address: "Rua Rio Paru, 175 - Jd Pararangaba, São José dos Campos - SP",
@@ -192,37 +194,37 @@ const fallbackMeeting: CellMeeting = {
 
 // Mock Monthly Schedule
 export const mockMonthlySchedule: MonthlySchedule = {
-  id: "1",
-  month: 3,
+  id: "2",
+  month: 4,
   year: 2026,
   weeks: [
     {
       id: "w1",
       weekNumber: 1,
       label: "Semana 01 - Sexta",
-      date: "2026-03-06",
-      houseName: "Casa da Cláudia",
-      address: "Rua Barbados, 54 - Vista Verde, São José dos Campos - SP",
-      mapsLink: "https://maps.app.goo.gl/Tp5Bexymzg9wt9wW9",
-      assignments: {
-        casa: ["Cláudia"],
-        quebraGelo: ["Cláudia"],
-        estudo: ["Adriana"],
-        salinha: ["Paulo", "Silvana"],
-      },
-    },
-    {
-      id: "w2",
-      weekNumber: 2,
-      label: "Semana 02 - Sexta",
-      date: "2026-03-13",
+      date: "2026-04-03",
       houseName: "Casa do Adriano & Adriana",
       address: "Rua Rio Paru, 175 - Jd Pararangaba, São José dos Campos - SP",
       mapsLink: "https://maps.app.goo.gl/ehihCn8FvJRSHkMb9",
       assignments: {
         casa: ["Adriano", "Adriana"],
         quebraGelo: ["Adriano", "Adriana"],
-        estudo: ["Paulo"],
+        estudo: ["Adriano"],
+        salinha: ["Adriana"],
+      },
+    },
+    {
+      id: "w2",
+      weekNumber: 2,
+      label: "Semana 02 - Sexta",
+      date: "2026-04-10",
+      houseName: "Casa do Paulo & Silvana",
+      address: "Rua dos Heliotrópios, 255 - Jd. Motorama, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/c8SH5ua3syX5dQ6g9",
+      assignments: {
+        casa: ["Paulo", "Silvana"],
+        quebraGelo: ["Paulo", "Silvana"],
+        estudo: ["Adriana"],
         salinha: ["Marcelo", "Andreia"],
       },
     },
@@ -230,30 +232,34 @@ export const mockMonthlySchedule: MonthlySchedule = {
       id: "w3",
       weekNumber: 3,
       label: "Semana 03 - Sexta",
-      date: "2026-03-20",
-      houseName: "Casa da Ana Carla & Guilherme",
-      address: "Av. Alberto Renart, 795 - Santa Inês 1, São José dos Campos - SP",
-      mapsLink: "https://maps.app.goo.gl/54Chr1MN7wjvKPg16",
+      date: "2026-04-17",
+      houseName: "Casa do Marcelo & Andreia",
+      address: "Rua Cidade Montevideo, 134 - Vista Verde, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/QEySpXEnsrSCxZHP6",
       assignments: {
-        casa: ["Ana", "Guilherme"],
-        quebraGelo: ["Ana", "Guilherme"],
-        estudo: ["Silvana"],
-        salinha: ["Adriano", "Adriana"],
+        casa: ["Marcelo", "Andreia"],
+        quebraGelo: ["Marcelo", "Andreia"],
+        estudo: ["Paulo"],
+        salinha: ["Guilherme", "Ana Carla"],
       },
     },
     {
       id: "w4",
       weekNumber: 4,
-      label: "Semana 04 - Sábado",
-      date: "2026-03-28",
+      label: "Semana 04 - Quinta - Noite de Oração",
+      date: "2026-04-24",
       isPrayerNight: true,
-      prayerNightType: "church",
+      prayerNightType: "cell",
       prayerTime: "20:00",
+      houseName: "Casa do Zenildo & Márcia",
+      address: "R. Buenos Aíres, 83 - Vista Verde, São José dos Campos - SP",
+      mapsLink: "https://maps.app.goo.gl/45XFmvBLFmhDnnFD8",
       assignments: {
-        casa: ["—"],
-        quebraGelo: ["—"],
-        estudo: ["—"],
-        salinha: ["—"],
+        casa: ["Zenildo", "Márcia"],
+        salinha: ["Paulo", "Silvana"],
+        igreja: ["Marcelo"],
+        pais: ["Cláudia"],
+        missoes: ["Adriana"],
       },
     },
   ],
