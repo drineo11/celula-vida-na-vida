@@ -270,7 +270,7 @@ export const mockNotices: Notice[] = [
   {
     id: "1",
     title: "Guia do Discipulador",
-    description: "Dia 11/04",
+    description: "Dia 11/04 - Sábado das 13h às 18h, na igreja",
     date: "2026-04-11",
     pinned: false,
   },
