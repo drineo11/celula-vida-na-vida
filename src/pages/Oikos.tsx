@@ -12,7 +12,7 @@ const oikosData: OikosFamily[] = [
   { leader: "Márcia", members: ["Regina", "Matheus", "Rayssa"] },
   { leader: "Cláudia", members: ["Ronaldo", "Júlia", "Vitor"] },
   { leader: "Silvana", members: ["Adriane", "Edilene", "Viviane"] },
-  { leader: "Isaac", members: ["Terry", "Gustavo", "Rafael"] },
+  { leader: "Isaac", members: ["Terry", "Gustavo", "Rafael", "Beatriz"] },
   { leader: "Zenildo", members: ["Irmãos"] },
   { leader: "Ana Carla", members: ["Josie"] },
   { leader: "Marcelo", members: ["João Pedro"] },
