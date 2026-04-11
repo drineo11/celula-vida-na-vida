@@ -267,15 +267,9 @@ export const mockMonthlySchedule: MonthlySchedule = {
 
 // Recados & Programação
 export const mockNotices: Notice[] = [
+ 
   {
     id: "1",
-    title: "Guia do Discipulador",
-    description: "Dia 11/04 - Sábado das 13h às 18h, na igreja",
-    date: "2026-04-11",
-    pinned: false,
-  },
-  {
-    id: "2",
     title: "Day Camp",
     description: "Dia 21/04",
     date: "2026-04-21",
