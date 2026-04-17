@@ -73,6 +73,8 @@ export interface Notice {
   description: string;
   date?: string;
   pinned: boolean;
+  location?: string;
+  mapsLink?: string;
 }
 
 // Mapeamento de endereços das casas
@@ -246,34 +248,30 @@ export const mockMonthlySchedule: MonthlySchedule = {
     {
       id: "w4",
       weekNumber: 4,
-      label: "Semana 04 - Quinta - Noite de Oração",
+      label: "Semana 04 - Sexta",
       date: "2026-04-24",
-      isPrayerNight: true,
-      prayerNightType: "cell",
-      prayerTime: "20:00",
       houseName: "Casa do Zenildo & Márcia",
       address: "R. Buenos Aíres, 83 - Vista Verde, São José dos Campos - SP",
       mapsLink: "https://maps.app.goo.gl/45XFmvBLFmhDnnFD8",
       assignments: {
         casa: ["Zenildo", "Márcia"],
+        quebraGelo: ["Zenildo", "Márcia"],
+        estudo: ["Adriano"],
         salinha: ["Paulo", "Silvana"],
-        igreja: ["Marcelo"],
-        pais: ["Cláudia"],
-        missoes: ["Adriana"],
       },
     },
   ],
 };
 
-// Recados & Programação
 export const mockNotices: Notice[] = [
- 
   {
     id: "1",
     title: "Day Camp",
     description: "Dia 21/04",
     date: "2026-04-21",
     pinned: false,
+    location: "Recanto Planeta Terra - Putim",
+    mapsLink: "https://maps.app.goo.gl/KYA6rZqtCXgLFwcr9",
   },
 ];
 

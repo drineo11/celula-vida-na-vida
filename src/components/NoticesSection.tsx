@@ -1,4 +1,4 @@
-import { Pin, Calendar } from "lucide-react";
+import { Pin, Calendar, MapPin } from "lucide-react";
 import { Notice } from "@/lib/mockData";
 import { parseDateSafe } from "@/lib/utils";
 
@@ -47,9 +47,30 @@ export function NoticesSection({ notices }: NoticesSectionProps) {
                     {notice.title}
                   </h3>
                 </div>
-                <p className="text-sm text-muted-foreground line-clamp-2">
+                <p className="text-sm text-muted-foreground whitespace-pre-wrap">
                   {notice.description}
                 </p>
+                {notice.location && (
+                  <div className="mt-2 text-sm text-muted-foreground flex items-start gap-1.5">
+                    <MapPin size={14} className="mt-0.5 flex-shrink-0 text-primary" />
+                    <span>
+                      <span className="font-medium">Local:</span> {notice.location}
+                      {notice.mapsLink && (
+                        <>
+                          .{" "}
+                          <a 
+                            href={notice.mapsLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline font-medium inline-block"
+                          >
+                            Google Maps (CLIQUE AQUI)
+                          </a>
+                        </>
+                      )}
+                    </span>
+                  </div>
+                )}
               </div>
               
               {notice.date && (
