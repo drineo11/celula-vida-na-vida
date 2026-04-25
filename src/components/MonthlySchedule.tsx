@@ -75,11 +75,11 @@ export function MonthlyScheduleView({ schedule }: MonthlyScheduleProps) {
                 <div className="bg-primary text-primary-foreground px-4 py-3">
                   <h2 className="font-display font-bold text-lg sm:text-xl flex items-center gap-2">
                     <Church size={18} />
-                    • NOITE DE ORAÇÃO NA IGREJA • {dayNumber}/{monthNumber}
+                    • NA IGREJA • {dayNumber}/{monthNumber}
                   </h2>
                 </div>
                 <div className="p-7 text-center text-muted-foreground">
-                  <p className="text-lg sm:text-3xl">Reunião na igreja às <strong>{timeDisplay}</strong></p>
+                  <p className="text-lg font-bold sm:text-3xl">CONFERÊNCIA MISSIONÁRIA </p>
                 </div>
               </article>
             );

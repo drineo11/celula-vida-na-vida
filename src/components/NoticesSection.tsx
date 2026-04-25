@@ -27,7 +27,7 @@ export function NoticesSection({ notices }: NoticesSectionProps) {
         Recados & Programação
       </h2>
 
-      <div className="space-y-3">
+    {/*   <div className="space-y-3">
         {sortedNotices.map((notice) => (
           <article 
             key={notice.id}
@@ -87,7 +87,7 @@ export function NoticesSection({ notices }: NoticesSectionProps) {
             </div>
           </article>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
