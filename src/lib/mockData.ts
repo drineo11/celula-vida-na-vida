@@ -299,6 +299,15 @@ export const mockNotices: Notice[] = [
   },
   {
     id: "3",
+    title: "Festa de Aniversário da Márcia",
+    description: "Domingo às 12h",
+    date: "2026-05-24",
+    pinned: false,
+    location: "Rua Vanderson Valle Vieira (Antiga Rua 4) - Jd Primavera",
+    mapsLink: "https://maps.app.goo.gl/S4H4eRuz5Kzg9cGbA",
+  },
+  {
+    id: "4",
     title: "Conferência Missionária",
     description: "Sábado às 14h",
     date: "2026-05-30",
