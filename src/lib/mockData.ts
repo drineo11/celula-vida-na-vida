@@ -281,12 +281,30 @@ export const mockMonthlySchedule: MonthlySchedule = {
 export const mockNotices: Notice[] = [
   {
     id: "1",
-    title: "Day Camp",
-    description: "Dia 21/04",
-    date: "2026-04-21",
+    title: "Café entre Amigas",
+    description: "Sábado às 16h",
+    date: "2026-05-16",
     pinned: false,
-    location: "Recanto Planeta Terra - Putim",
-    mapsLink: "https://maps.app.goo.gl/KYA6rZqtCXgLFwcr9",
+    location: "Rua Cidade Montevideo, nº 134 - Vista Verde",
+    mapsLink: "https://maps.app.goo.gl/QEySpXEnsrSCxZHP6",
+  },
+  {
+    id: "2",
+    title: "Culto Infantil de Missões",
+    description: "Sábado às 15:15",
+    date: "2026-05-23",
+    pinned: false,
+    location: "Igreja",
+    mapsLink: "https://maps.app.goo.gl/divXFvEau5qx6y2GA",
+  },
+  {
+    id: "3",
+    title: "Conferência Missionária",
+    description: "Sábado às 14h",
+    date: "2026-05-30",
+    pinned: false,
+    location: "Igreja",
+    mapsLink: "https://maps.app.goo.gl/divXFvEau5qx6y2GA",
   },
 ];
 
