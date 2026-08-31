@@ -79,7 +79,7 @@ export function MonthlyScheduleView({ schedule }: MonthlyScheduleProps) {
                   </h2>
                 </div>
                 <div className="p-7 text-center text-muted-foreground">
-                  <p className="text-lg font-bold sm:text-3xl">CONFERÊNCIA MISSIONÁRIA </p>
+                  <p className="text-lg font-bold sm:text-3xl">REUNIÃO DE ORAÇÃO NA IGREJA</p>
                 </div>
               </article>
             );
