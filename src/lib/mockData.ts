@@ -176,6 +176,7 @@ export const mockParticipants: Participant[] = [
   { id: "14", name: "Paulo", birthDate: "1980-08-12" },
   { id: "15", name: "Benjamim", birthDate: "2018-08-18" },
   // Setembro
+  { id: "24", name: "Patrícia", birthDate: "1990-09-07" },
   { id: "16", name: "Rômulo", birthDate: "1988-09-13" },
   { id: "17", name: "Yasmim", birthDate: "1990-09-13" },
   { id: "18", name: "Adriana", birthDate: "1990-09-28" },
