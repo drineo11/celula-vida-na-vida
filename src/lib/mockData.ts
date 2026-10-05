@@ -240,7 +240,7 @@ export const mockMonthlySchedule: MonthlySchedule = {
       id: "w3",
       weekNumber: 3,
       label: "Semana 03 - Sexta",
-      date: "2026-10-23",
+      date: "2026-10-24",
       isPrayerNight: true,
       prayerNightType: "church",
       prayerTime: "20:00",
